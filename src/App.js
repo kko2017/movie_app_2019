@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+function Food({ fav }) {
+  console.log({ fav });
+  return <h1>I Like {fav}</h1>;
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3>Hello!</h3>
+      <Food fav="Nangmyun" />
+      <Food fav="Ramen" />
+      <Food fav="Kimchi" />
+      <Food fav="Sogogi" />
+      <Food fav="Bibimbab" />
     </div>
   );
 }
