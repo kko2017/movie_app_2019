@@ -1,6 +1,11 @@
 import React from "react";
 
 class App extends React.Component {
+  constructor(prop) {
+    super(prop);
+    console.log("I am constructor.");
+  }
+
   // You don't have to change the state directly.
   // State is data that is able to change itself in the indirect way.
   state = {
@@ -19,8 +24,17 @@ class App extends React.Component {
     this.setState(current => ({ number: current.number - 1 }));
   };
 
+  componentDidMount() {
+    console.log("Component rendered.");
+  }
+
+  componentDidUpdate() {
+    console.log("I just updated.");
+  }
+
   render() {
     // return <h1>I am a class component.</h1>;
+    console.log("Component is redering now.");
     return (
       <div>
         <h1>This number is {this.state.number}</h1>
